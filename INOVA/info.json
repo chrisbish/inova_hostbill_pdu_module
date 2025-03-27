@@ -1,0 +1,4 @@
+{
+  "name": "IONOVA",
+  "description": "Generic SNMP driver for INOVA PDU.  Power billing use/require HostBill PowerCollector module."
+}
