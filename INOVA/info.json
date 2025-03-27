@@ -1,4 +1,4 @@
 {
-  "name": "IONOVA",
-  "description": "Generic SNMP driver for INOVA PDU.  Power billing use/require HostBill PowerCollector module."
+  "name": "IONOVA - M2S0016-08N10QRSE1",
+  "description": "SNMP driver for INOVA M2S0016-08N10QRSE1 PDU. Version 1.13.14b. Power billing use/require HostBill PowerCollector module."
 }

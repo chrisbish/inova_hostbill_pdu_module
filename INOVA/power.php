@@ -29,9 +29,9 @@ $snmp = HBLoader::LoadComponent('Net/SNMP_wrapper');
 $snmp->Connect($app['ip'], 161, $app['write']);
 
 if ($state) {
-    $return = $snmp->Set('.1.3.6.1.4.1.318.1.1.26.9.2.4.1.5.' . $port, 'i', 1);
+    $return = $snmp->Set('.1.3.6.1.4.1.63131.1.1.26.9.2.4.1.5.' . $port, 'i', 1);
 } else {
-    $return = $snmp->Set('.1.3.6.1.4.1.318.1.1.26.9.2.4.1.5.' . $port, 'i', 2);
+    $return = $snmp->Set('.1.3.6.1.4.1.63131.1.1.26.9.2.4.1.5.' . $port, 'i', 2);
 }
 
 if (!$return) {

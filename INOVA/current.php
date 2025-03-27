@@ -26,7 +26,7 @@
 $snmp = HBLoader::LoadComponent('Net/SNMP_wrapper');
 $snmp->Connect($app['ip'],161,$app['read']);
 
-$current = $snmp->Get('.1.3.6.1.4.1.318.1.1.26.9.4.3.1.6.'.$port);
+$current = $snmp->Get('.1.3.6.1.4.1.63131.1.1.26.9.4.3.1.6.'.$port);
 if(!$current) {
     throw new Exception("Unable to fetch port's current from PDU");
 }

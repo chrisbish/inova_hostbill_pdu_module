@@ -25,7 +25,7 @@
 $snmp = HBLoader::LoadComponent('Net/SNMP_wrapper');
 $snmp->Connect($app['ip'],161,$app['read']);
 
-$maxpower = $snmp->Get('.1.3.6.1.4.1.318.1.1.26.9.4.3.1.8.'.$port);
+$maxpower = $snmp->Get('.1.3.6.1.4.1.63131.1.1.26.9.4.3.1.'.$port);
 if(!$maxpower) {
     throw new Exception("Unable to fetch maximum port's power PDU");
 }
@@ -33,7 +33,7 @@ if(!$maxpower) {
 $maxpower  = str_ireplace('INTEGER: ','',$maxpower);
 
 
-$voltage = $snmp->Get('.1.3.6.1.4.1.318.1.1.26.6.3.1.6.1'); //.$port);
+$voltage = $snmp->Get('.1.3.6.1.4.1.63131.1.1.26.9.4.3.1.16'); //.$port);
 if(!$voltage) {
     throw new Exception("Unable to fetch voltage from PDU");
 }

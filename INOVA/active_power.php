@@ -25,7 +25,7 @@
 $snmp = HBLoader::LoadComponent('Net/SNMP_wrapper');
 $snmp->Connect($app['ip'],161,$app['read']);
 
-$active_power = $snmp->Get('.1.3.6.1.4.1.318.1.1.26.9.4.3.1.7.'.$port);
+$active_power = $snmp->Get('.1.3.6.1.4.1.63131.1.1.26.9.4.3.1.7.'.$port);
 if(!$active_power) {
     throw new Exception("Unable to fetch  port's active power PDU");
 }

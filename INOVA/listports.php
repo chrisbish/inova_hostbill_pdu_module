@@ -30,7 +30,7 @@ $snmp = HBLoader::LoadComponent('Net/SNMP_wrapper');
 $snmp->Connect($app['ip'],161,$app['read']);
 
 
-$tree = $snmp->GetTree('.1.3.6.1.4.1.318.1.1.26.9.2.3.1.3');
+$tree = $snmp->GetTree('.1.3.6.1.4.1.63131.1.1.26.9.2.1.1.3');
 if(is_array($tree) && !empty ($tree)) {
     foreach($tree as $k=>$itm) {
         $x=str_ireplace(array('STRING: ','"'), '', $itm);
